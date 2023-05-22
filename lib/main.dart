@@ -9,13 +9,11 @@ import 'package:get/get.dart';
 
 // important!!!
 final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+// initialice package Class with the navigatorKey
+final wra = WrAlerts(navigatorKey);
+
 // solo usado en el ejemplo
 const String titulo = 'Wikired Alertas';
-
-// prueba
-//inicializa la clase wra con el navigatorKey
-// final wra = WrAlerts(GlobalKey<NavigatorState>());
-final wra = WrAlerts(navigatorKey);
 
 void main() {
   runApp(const MainApp());
@@ -65,8 +63,6 @@ class MainPage extends StatelessWidget {
                   MyButton2(
                     buttonText: 'ScaffoldMessenger.showSnackBar',
                     onTap: () {
-                      // Wr Alerts().snack('Todo ha salido bien');
-                      print('wikired ${wra.contextoGlobal}');
                       wra.snack('Todo ha salido bien');
                     },
                   ),

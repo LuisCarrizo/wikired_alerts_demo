@@ -22,17 +22,41 @@ A library that provides a lot of options of alerts with and without context.
 
 ### Getting started
 
-First, add `wikired_alerts` as a [dependency in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
+1) add `wikired_alerts` as a [dependency in your pubspec.yaml file](https://flutter.dev/platform-plugins/).
 
 
 ```yaml
 dependencies:
 
-  cupertino_icons: ^1.0.2
-  get: ^4.6.5
-  quickalert: ^1.0.1
-  toastification: ^0.0.3
+  wikired_alerts:
+    git:
+      url: https://github.com/LuisCarrizo/wikired_alerts.git
 ```
+
+2) **import package**
+
+```
+import 'package:wikired_alerts/wikired_alerts.dart';
+```
+
+3) **initialice a ```GlobalKey<NavigatorState>```**
+
+```main.dart
+final GlobalKey<NavigatorState> navigatorKey = GlobalKey<NavigatorState>();
+```
+
+4) **initialice package Class with the navigatorKey**
+
+```
+final wra = WrAlerts(navigatorKey);
+```
+
+5) **Use as you will**
+
+```
+wra.qaOk('Process is finished');
+```
+
 
 ## Examples
 
